@@ -1,6 +1,7 @@
 $columns: 12;
 $atom: (100% / $columns);
 
+$break_bp407: 407px;
 $break_bp480: 480px;
 $break_bp768: 768px;
 $break_bp994: 994px;
@@ -9,6 +10,7 @@ $break_bp1440: 1440px;
 $break_bp1800: 1800px;
 
 $offset: 30px;
+$offset_bp407: $offset;
 $offset_bp480: $offset;
 $offset_bp768: $offset;
 $offset_bp994: $offset;
@@ -17,6 +19,7 @@ $offset_bp1440: $offset;
 $offset_bp1800: $offset;
 
 $offset_one_side: ($offset / 2);
+$offset_bp407_one_side: ($offset_bp407 / 2);
 $offset_bp480_one_side: ($offset_bp480 / 2);
 $offset_bp768_one_side: ($offset_bp768 / 2);
 $offset_bp994_one_side: ($offset_bp994 / 2);
@@ -87,6 +90,11 @@ $fields: 15px;
     width: #{calc(#{$val} - #{$offset})};
 }
 
+@mixin size-bp407($n){
+    $val: 100% / $columns * $n;
+    @include bp407(width, #{calc(#{$val} - #{$offset_bp407})});
+}
+
 @mixin size-bp480($n){
     $val: 100% / $columns * $n;
     @include bp480(width, #{calc(#{$val} - #{$offset_bp480})});
@@ -147,6 +155,38 @@ $fields: 15px;
 @mixin shift-padding-right($n){
     $val: 100% / $columns * $n;
     padding-right: #{calc(#{$val} + #{$offset_one_side})};
+}
+
+@mixin shift-bp407($n){
+    $val: 100% / $columns * $n;
+    @include bp407(margin-left, #{calc(#{$val} + #{$offset_bp407_one_side})});
+    @include bp407(margin-right, #{calc(#{$val} + #{$offset_bp407_one_side})});
+}
+
+@mixin shift-bp407-left($n){
+    $val: 100% / $columns * $n;
+    @include bp407(margin-left, #{calc(#{$val} + #{$offset_bp407_one_side})});
+}
+
+@mixin shift-bp407-right($n){
+    $val: 100% / $columns * $n;
+    @include bp407(margin-right, #{calc(#{$val} + #{$offset_bp407_one_side})});
+}
+
+@mixin shift-bp407-padding($n){
+    $val: 100% / $columns * $n;
+    @include bp407(padding-left, #{calc(#{$val} + #{$offset_bp407_one_side})});
+    @include bp407(padding-right, #{calc(#{$val} + #{$offset_bp407_one_side})});
+}
+
+@mixin shift-bp407-padding-left($n){
+    $val: 100% / $columns * $n;
+    @include bp407(padding-left, #{calc(#{$val} + #{$offset_bp407_one_side})});
+}
+
+@mixin shift-bp407-padding-right($n){
+    $val: 100% / $columns * $n;
+    @include bp407(padding-right, #{calc(#{$val} + #{$offset_bp407_one_side})});
 }
 
 @mixin shift-bp480($n){
@@ -339,6 +379,18 @@ $fields: 15px;
 @mixin shift-bp1800-padding-right($n){
     $val: 100% / $columns * $n;
     @include bp1800(padding-right, #{calc(#{$val} + #{$offset_bp1800_one_side})});
+}
+
+@mixin bp407($name, $value){
+    @media screen and (min-width: $break_bp407){
+        #{$name}: $value;
+    }
+}
+
+@mixin bp407-block(){
+    @media screen and (min-width: $break_bp407){
+        @content;
+    }
 }
 
 @mixin bp480($name, $value){
