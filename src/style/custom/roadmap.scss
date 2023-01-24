@@ -1,0 +1,182 @@
+.roadmap {
+
+  &__inner {}
+
+  &__item-inner {
+    position: relative;
+    // padding: 122px 94px;
+    padding: 44px 20px 0px 20px;
+    overflow: hidden;
+    background: radial-gradient(60.11% 29.93% at 49.4% 50.07%, #150B37 0%, #000000 100%);
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+    &::after {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      bottom: -7px;
+      left: -7px;
+      content: "";
+      border: dashed 10px #fff;
+
+    }
+  }
+
+  &__item {
+
+    margin-bottom: 50px;
+    margin-left: 14px;
+
+
+
+    @include bp768-block {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(180deg, #5828C0 0%, #3B1FA0 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    line-height: 45px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: -14px;
+
+    @include bp480-block {
+      font-size: 26px;
+
+      width: 140px;
+    }
+
+    @include bp768-block {
+      margin-bottom: 38px;
+      font-size: 30px;
+
+      width: 168px;
+      height: 52px;
+    }
+
+    &--a {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -184px;
+        left: 14px;
+        border: 1px solid #1BFF6C;
+        width: 0px;
+        height: 182px;
+      }
+    }
+
+    &--b {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -62px;
+        left: 14px;
+        border: 1px solid #1BFF6C;
+        width: 0px;
+        height: 60px;
+
+
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -133px;
+        left: 14px;
+        border: 1px solid white;
+        width: 0px;
+        height: 70px;
+      }
+    }
+
+    &--c {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -139px;
+        left: 14px;
+        border: 1px solid white;
+        width: 0px;
+        height: 137px;
+      }
+    }
+
+    &--d {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -35px;
+        left: 14px;
+        border: 1px solid white;
+        width: 0px;
+        height: 33px;
+      }
+    }
+  }
+
+  &__item-text-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 50px;
+
+    @include bp480-block {}
+
+    @include bp768-block {
+      max-width: 85px;
+
+    }
+  }
+
+  &__desc {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1BFF6C;
+
+
+
+    @include bp480-block {
+      font-size: 22px;
+    }
+
+    @include bp768-block {
+      font-size: 30px;
+    }
+  }
+
+  &__desc--alt {
+    color: white;
+
+  }
+
+  &__logo {
+    width: 100%;
+    margin-top: 30px;
+
+    @include bp768-block {
+      // width: 779px;
+      // height: 145px;
+    }
+  }
+}
+
+.section {
+
+  &__box {}
+}

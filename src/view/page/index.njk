@@ -19,6 +19,15 @@
     scrollTo: 'collection'
     }%}
     {% include "section/collection-section.njk" %}
+    
+     {% set inject = {
+    wrapper: 'flat',
+    sectionBox: 'section__box layout__offset deco__spot deco__spot__roadmap',
+    sectionTitle: 'Roadmap',
+    scrollTo: 'roadmap'
+    }%}
+    {% include "section/roadmap.njk" %}
+    
     {% set inject = {
     wrapper: 'flat',
     sectionBox: 'section__box layout__offset deco__spot deco__spot__tokenomics_1',
