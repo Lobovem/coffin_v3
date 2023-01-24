@@ -1,27 +1,27 @@
-<div class="roadmap">
-    <div class="roadmap__inner section__box">
-        <div class="roadmap__textbox section__cell">
-            <div class="roadmap__text paragraph">
-                <!-- <p class="paragraph__item roadmap__phase">PHASE 1</p> -->
-                <!-- <p class="paragraph__item roadmap__title">Build coffins</p> -->
+<div class="tokenomics">
+    <div class="tokenomics__inner section__box">
+        <div class="tokenomics__textbox section__cell">
+            <div class="tokenomics__text paragraph">
+                <!-- <p class="paragraph__item tokenomics__phase">PHASE 1</p> -->
+                <!-- <p class="paragraph__item tokenomics__title">Build coffins</p> -->
                 <!-- <p class="paragraph__item">Coffins are resting places for Deadbois.</p> -->
                 <!-- <p class="paragraph__item"> -->
                 <!--     The collection has 5 tiers of coffins made of different materials which determine the utility a holder gets - check out rarity and utility section. -->
                 <!-- </p> -->
-                <p class="paragraph__item roadmap__phase">PHASE 1 - Q4 2022</p>
+                <p class="paragraph__item tokenomics__phase">PHASE 1 - Q4 2022</p>
                 <p class="paragraph__item deco__line-cros">Legal settlements</p>
                 <p class="paragraph__item deco__line-cros">NFT art development</p>
                 <p class="paragraph__item deco__line-cros">PFP collection art development</p>
                 <p class="paragraph__item deco__line-cros">Website launch</p>
             </div>
         </div>
-        <div class="roadmap__presentation section__cell">
-            <div class="roadmap__imgbox">
+        <div class="tokenomics__presentation section__cell">
+            <div class="tokenomics__imgbox">
                 {% for item in prize.prize_list %}
                     <img src="/img/regular/coffin/coffin_{{ item.img }}.png"
                          alt="{{ item.img }}"
                          data-id="{{ loop.index }}"
-                         class="img roadmap__img-anim{{ ' roadmap__img-anim_active' if item.class_active else '' }}">
+                         class="img tokenomics__img-anim{{ ' tokenomics__img-anim_active' if item.class_active else '' }}">
                 {% endfor %}
             </div>
         </div>
