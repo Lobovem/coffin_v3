@@ -30,6 +30,7 @@ const settings = {
     bp480: {
       width: '480px',
     },
+
     /*
         We can create any quantity of break points.
 
