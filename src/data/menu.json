@@ -25,12 +25,8 @@
       "name": "FAQ",
       "id": "faq",
       "href": "faq"
-    },
-    {
-      "name": "Whitelist Lottery",
-      "id": "whitelist",
-      "href": "whitelist"
     }
+   
   ],
   "menusub_list": [
     {
