@@ -8,13 +8,6 @@
 @font-face {
 	font-family: NeueMachina;
 	font-display: swap;
-	src: url("../font/NeueMachina-Bold.woff2") format("woff2"),url("../font/NeueMachina-Bold.ttf") format("ttf"), url("../font/NeueMachina-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: NeueMachina;
-	font-display: swap;
 	src: url("../font/NeueMachina-Medium.woff2") format("woff2"),url("../font/NeueMachina-Medium.ttf") format("ttf"), url("../font/NeueMachina-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
@@ -29,15 +22,15 @@
 @font-face {
 	font-family: Poppins;
 	font-display: swap;
-	src: url("../font/Poppins-Regular.woff2") format("woff2"),url("../font/Poppins-Regular.ttf") format("ttf"), url("../font/Poppins-Regular.woff") format("woff");
-	font-weight: 400;
+	src: url("../font/Poppins-Medium.woff2") format("woff2"),url("../font/Poppins-Medium.ttf") format("ttf"), url("../font/Poppins-Medium.woff") format("woff");
+	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-	font-family: Poppins;
+	font-family: NeueMachina;
 	font-display: swap;
-	src: url("../font/Poppins-Medium.woff2") format("woff2"),url("../font/Poppins-Medium.ttf") format("ttf"), url("../font/Poppins-Medium.woff") format("woff");
-	font-weight: 500;
+	src: url("../font/NeueMachina-Bold.woff2") format("woff2"),url("../font/NeueMachina-Bold.ttf") format("ttf"), url("../font/NeueMachina-Bold.woff") format("woff");
+	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
@@ -45,5 +38,12 @@
 	font-display: swap;
 	src: url("../font/Poppins-SemiBold.woff2") format("woff2"),url("../font/Poppins-SemiBold.ttf") format("ttf"), url("../font/Poppins-SemiBold.woff") format("woff");
 	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: Poppins;
+	font-display: swap;
+	src: url("../font/Poppins-Regular.woff2") format("woff2"),url("../font/Poppins-Regular.ttf") format("ttf"), url("../font/Poppins-Regular.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }
