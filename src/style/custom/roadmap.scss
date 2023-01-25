@@ -1,34 +1,27 @@
 .roadmap {
 
-  &__inner {
-    // width: 100%;
-  }
+  &__inner {}
 
   &__item-inner {
     position: relative;
-    // padding: 122px 94px;
     padding: 44px 20px 0px 20px;
     overflow: hidden;
     background: radial-gradient(60.11% 29.93% at 49.4% 50.07%, #150B37 0%, #000000 100%);
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
 
     @include bp1100-block {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      gap: 0 80px;
-      padding: 80px 80px 0px 80px;
-      background: radial-gradient(34.11% 49.93% at 49.4% 50.07%, #150B37 0%, #000000 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-      ;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 80px 80px 60px 80px;
+      justify-content: space-between;
+      background: radial-gradient(34.11% 49.93% at 49.4% 50.07%, #150B37 0%, #000000 100%);
 
     }
 
     @include bp1440-block {
-      flex-direction: row;
-      gap: 20px;
-      padding: 40px 30px 0 30px;
-      flex-wrap: nowrap;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      padding: 60px 20px 30px 60px;
     }
 
     &::after {
@@ -53,6 +46,11 @@
 
     @include bp768-block {
       margin-bottom: 70px;
+    }
+
+    @include bp1100-block {
+      margin-left: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -99,6 +97,22 @@
           height: 270px;
           bottom: -270px;
         }
+
+        @include bp1100-block {
+          height: 276px;
+          bottom: -278px;
+        }
+
+        @media (min-width: 1186px) {
+          height: 268px;
+          bottom: -270px;
+
+        }
+
+        @include bp1440-block {
+          height: 290px;
+          bottom: -292px;
+        }
       }
     }
 
@@ -117,6 +131,11 @@
           bottom: -100px;
         }
 
+        @include bp1440-block {
+          height: 106px;
+          bottom: -106px;
+        }
+
 
       }
 
@@ -133,6 +152,13 @@
           height: 100px;
           bottom: -202px;
         }
+
+        @include bp1440-block {
+          height: 118px;
+          bottom: -218px;
+        }
+
+
       }
     }
 
@@ -146,14 +172,39 @@
         width: 0px;
         height: 137px;
 
-        @media (min-width:407px) {
+        @include bp407-block {
           bottom: -134px;
           height: 132px;
+
         }
 
         @include bp768-block {
           height: 202px;
           bottom: -202px;
+        }
+
+        @include bp1100-block {
+          bottom: -212px;
+          height: 210px;
+
+        }
+
+        @media (min-width: 1125px) {
+          bottom: -206px;
+          height: 204px;
+
+        }
+
+
+        @media (min-width: 1233px) {
+          bottom: -202px;
+          height: 200px;
+
+        }
+
+        @include bp1440-block {
+          bottom: -254px;
+          height: 252px;
         }
       }
     }
@@ -172,6 +223,29 @@
           height: 65px;
           bottom: -65px;
         }
+
+        @include bp1100-block {
+          bottom: -68px;
+          height: 66px;
+
+        }
+
+        @media (min-width: 1125px) {
+          bottom: -68px;
+          height: 66px;
+
+        }
+
+        @media (min-width: 1142px) {
+          bottom: -64px;
+          height: 62px;
+
+        }
+
+        @include bp1440-block {
+          bottom: -80px;
+          height: 80px;
+        }
       }
     }
   }
@@ -186,7 +260,6 @@
   &__img {
     max-width: 50px;
 
-    @include bp480-block {}
 
     @include bp768-block {
       max-width: 85px;
@@ -225,11 +298,7 @@
     @include bp768-block {
       width: 779px;
       height: 145px;
+      margin-top: 44px;
     }
   }
-}
-
-.section {
-
-  &__box {}
 }
