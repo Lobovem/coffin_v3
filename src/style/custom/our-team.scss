@@ -121,7 +121,15 @@
       background: #FFFFFF;
       border: 0.927469px solid #FFFFFF;
       border-radius: 48.2284px;
-      color: #100432;
+
+      .our-team__link {
+        color: #100432;
+
+      }
+
+      .our-team__icon {
+        stroke: black;
+      }
 
     }
   }
@@ -140,8 +148,6 @@
     -o-transition: background 0.25s, color 0.25s;
     transition: background 0.25s, color 0.25s;
 
-    &:hover {
-      color: #100432;
-    }
+
   }
 }
