@@ -19,7 +19,6 @@
     scrollTo: 'collection'
     }%}
     {% include "section/collection-section.njk" %}
-    
      {% set inject = {
     wrapper: 'flat',
     sectionBox: 'section__box layout__offset deco__spot deco__spot__roadmap',
@@ -27,7 +26,6 @@
     scrollTo: 'roadmap'
     }%}
     {% include "section/roadmap.njk" %}
-    
     {% set inject = {
     wrapper: 'flat',
     sectionBox: 'section__box layout__offset deco__spot deco__spot__tokenomics_1',
@@ -60,6 +58,13 @@
     scrollTo: 'rarity'
     }%}
     {% include "section/rarity-section.njk" %}
+    {% set inject = {
+    wrapper: 'flat',
+    sectionBox: 'section__box layout__offset deco__spot deco__spot__our-team' ,
+    sectionTitle: 'OUR TEAM',
+    scrollTo: 'our-team'
+    }%}
+    {% include "section/our-team.njk" %}
     {% set inject = {
     wrapper: 'flat',
     sectionBox: 'section__box layout__offset deco__spot' ,
