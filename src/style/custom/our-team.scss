@@ -113,6 +113,17 @@
     align-items: center;
     margin-bottom: 8px;
     padding: 6px 10px;
+    -webkit-transition: background 0.25s, color 0.25s;
+    -o-transition: background 0.25s, color 0.25s;
+    transition: background 0.25s, color 0.25s;
+
+    &:hover {
+      background: #FFFFFF;
+      border: 0.927469px solid #FFFFFF;
+      border-radius: 48.2284px;
+      color: #100432;
+
+    }
   }
 
   &__icon {}
@@ -125,5 +136,12 @@
     text-transform: uppercase;
 
     color: #FFFFFF;
+    -webkit-transition: background 0.25s, color 0.25s;
+    -o-transition: background 0.25s, color 0.25s;
+    transition: background 0.25s, color 0.25s;
+
+    &:hover {
+      color: #100432;
+    }
   }
 }

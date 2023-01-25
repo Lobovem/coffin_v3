@@ -206,7 +206,25 @@
           rgba(0, 0, 0, 1) 40%);
     }
 
+    &__our-team {
+      background: radial-gradient(circle at 61% 8%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 8%, rgb(0, 0, 0) 10%);
+
+      @include bp480-block {
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 0.6502976190476191) 64%, rgba(0, 0, 0, 1) 84%);
+      }
+
+      @include bp768-block {
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.9164040616246498) 4%, rgba(0, 0, 0, 0.6278886554621849) 51%, rgba(0, 0, 0, 1) 75%);
+      }
+
+      @include bp994-block {
+        background: radial-gradient(circle, rgb(0, 0, 0) 12%, rgba(0, 0, 0, 0.650297619) 64%, rgb(0, 0, 0) 74%);
+      }
+    }
+
     @include bp994-block() {
+
+
       &_banner_second {
         background: radial-gradient(circle at 50% 45%,
             rgba(0, 0, 0, 0) 0%,
