@@ -7,50 +7,90 @@
     @include row-flex();
     gap: 60px;
 
+    @include bp480-block {
+      gap: 60px 0;
+    }
+
+    @include bp994-block {
+      justify-content: center;
+    }
+
+    @include bp1440-block {
+      gap: 0px;
+    }
   }
 
+
   &__item {
-    // @include col () // @include col-3()
     @include col();
     @include size(12);
-    // flex-direction: column;
-    // display: flex;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include bp1440-block {
+      @include size(3)
+    }
+
+
+    @include bp480-block {
+      @include size(6)
+    }
+
+    @include bp1100-block {
+      @include size(5)
+    }
+
+    @include bp1440-block {
+      @include size(3)
+    }
+
 
   }
 
   &__img-box {
     margin-bottom: 10px;
+    background: #5013FF;
+    border-radius: 50%;
+
   }
 
   &__img {
-    width: 100%;
+    position: relative;
+    max-width: 200px;
+    height: auto;
     border-radius: 50%;
+    top: 0px;
+
+
+    @include bp768-block {
+      max-width: 290px;
+
+    }
 
   }
 
   &__title {
     font-weight: 700;
     font-size: 32px;
-    line-height: 135.2%;
+    line-height: 135%;
     text-align: center;
     letter-spacing: 0.02em;
 
     color: #FFFFFF;
     margin-bottom: 6px;
-    max-width: 280px;
+    max-width: 200px;
 
     @include bp768-block {
       font-size: 42px;
+      max-width: 270px;
     }
   }
 
   &__desc {
     font-weight: 400;
     font-size: 20px;
-    line-height: 135.2%;
+    line-height: 135%;
 
     text-align: center;
     letter-spacing: 0.02em;
@@ -80,19 +120,10 @@
   &__link {
     font-weight: 400;
     font-size: 20px;
-    line-height: 135.2%;
-    /* identical to box height, or 28px */
-
+    line-height: 135%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
 
     color: #FFFFFF;
   }
-}
-
-.section {
-
-  &__box {}
-
-  &__row {}
 }
